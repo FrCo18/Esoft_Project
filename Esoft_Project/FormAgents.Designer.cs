@@ -237,7 +237,7 @@
             this.Controls.Add(this.listViewAgents);
             this.Name = "FormAgents";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormAgents";
+            this.Text = "Риелторы";
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
