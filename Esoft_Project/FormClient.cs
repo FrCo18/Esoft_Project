@@ -44,7 +44,15 @@ namespace Esoft_Project
             clientSet.LastName = textBoxLastName.Text;
             clientSet.MiddleName = textBoxMiddleName.Text;
             clientSet.Phone = textBoxPhone.Text;
-            clientSet.Email = textBoxEmail.Text;
+            //Нахождение подстроки в почте
+            if (textBoxEmail.Text.Contains("@") == true && textBoxEmail.Text.Contains(".") == true)
+            {
+                clientSet.Email = textBoxEmail.Text;
+            }
+            else
+            {
+                textBoxEmail.Text = "Вы не правильно указали почту";
+            }
             //Добавляем нового клиента в таблицу клиентов
             Program.wftDb.ClientsSet.Add(clientSet);
             //Сохраняем измаенения в модели
@@ -115,6 +123,15 @@ namespace Esoft_Project
             catch
             {
                 MessageBox.Show("Невозможно удалить, эта запись используется!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void textBoxPhone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char num = e.KeyChar;
+            if (!Char.IsDigit(num) && num != 8 || num == 127)
+            {
+                e.Handled = true;
             }
         }
     }

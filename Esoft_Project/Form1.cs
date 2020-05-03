@@ -22,5 +22,17 @@ namespace Esoft_Project
             FormClient formClient = new FormClient();
             formClient.Show();
         }
+
+        private void buttonOpenAgents_Click(object sender, EventArgs e)
+        {
+            FormAgents formAgents = new FormAgents();
+            formAgents.Show();
+        }
+
+        private void buttonOpenRealEstates_Click(object sender, EventArgs e)
+        {
+            FormRealEstate realEstate = new FormRealEstate();
+            realEstate.Show();
+        }
     }
 }

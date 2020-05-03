@@ -54,9 +54,9 @@
             this.buttonOpenClients.BackColor = System.Drawing.Color.White;
             this.buttonOpenClients.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonOpenClients.Location = new System.Drawing.Point(2, 186);
-            this.buttonOpenClients.Margin = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.buttonOpenClients.Margin = new System.Windows.Forms.Padding(15);
             this.buttonOpenClients.Name = "buttonOpenClients";
-            this.buttonOpenClients.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.buttonOpenClients.Padding = new System.Windows.Forms.Padding(10);
             this.buttonOpenClients.Size = new System.Drawing.Size(265, 48);
             this.buttonOpenClients.TabIndex = 1;
             this.buttonOpenClients.Text = "Клиенты";
@@ -68,35 +68,37 @@
             this.buttonOpenAgents.BackColor = System.Drawing.Color.White;
             this.buttonOpenAgents.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonOpenAgents.Location = new System.Drawing.Point(2, 236);
-            this.buttonOpenAgents.Margin = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.buttonOpenAgents.Margin = new System.Windows.Forms.Padding(15);
             this.buttonOpenAgents.Name = "buttonOpenAgents";
-            this.buttonOpenAgents.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.buttonOpenAgents.Padding = new System.Windows.Forms.Padding(10);
             this.buttonOpenAgents.Size = new System.Drawing.Size(265, 48);
             this.buttonOpenAgents.TabIndex = 2;
             this.buttonOpenAgents.Text = "Риелторы";
             this.buttonOpenAgents.UseVisualStyleBackColor = false;
+            this.buttonOpenAgents.Click += new System.EventHandler(this.buttonOpenAgents_Click);
             // 
             // buttonOpenRealEstates
             // 
             this.buttonOpenRealEstates.BackColor = System.Drawing.Color.White;
             this.buttonOpenRealEstates.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonOpenRealEstates.Location = new System.Drawing.Point(2, 288);
-            this.buttonOpenRealEstates.Margin = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.buttonOpenRealEstates.Margin = new System.Windows.Forms.Padding(15);
             this.buttonOpenRealEstates.Name = "buttonOpenRealEstates";
-            this.buttonOpenRealEstates.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.buttonOpenRealEstates.Padding = new System.Windows.Forms.Padding(10);
             this.buttonOpenRealEstates.Size = new System.Drawing.Size(265, 48);
             this.buttonOpenRealEstates.TabIndex = 3;
             this.buttonOpenRealEstates.Text = "Объекты недвижимости";
             this.buttonOpenRealEstates.UseVisualStyleBackColor = false;
+            this.buttonOpenRealEstates.Click += new System.EventHandler(this.buttonOpenRealEstates_Click);
             // 
             // buttonOpenDemands
             // 
             this.buttonOpenDemands.BackColor = System.Drawing.Color.White;
             this.buttonOpenDemands.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonOpenDemands.Location = new System.Drawing.Point(2, 343);
-            this.buttonOpenDemands.Margin = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.buttonOpenDemands.Margin = new System.Windows.Forms.Padding(15);
             this.buttonOpenDemands.Name = "buttonOpenDemands";
-            this.buttonOpenDemands.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.buttonOpenDemands.Padding = new System.Windows.Forms.Padding(10);
             this.buttonOpenDemands.Size = new System.Drawing.Size(265, 48);
             this.buttonOpenDemands.TabIndex = 4;
             this.buttonOpenDemands.Text = "Предложения";
@@ -107,9 +109,9 @@
             this.buttonOpenSupplies.BackColor = System.Drawing.Color.White;
             this.buttonOpenSupplies.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonOpenSupplies.Location = new System.Drawing.Point(2, 395);
-            this.buttonOpenSupplies.Margin = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.buttonOpenSupplies.Margin = new System.Windows.Forms.Padding(15);
             this.buttonOpenSupplies.Name = "buttonOpenSupplies";
-            this.buttonOpenSupplies.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.buttonOpenSupplies.Padding = new System.Windows.Forms.Padding(10);
             this.buttonOpenSupplies.Size = new System.Drawing.Size(265, 48);
             this.buttonOpenSupplies.TabIndex = 5;
             this.buttonOpenSupplies.Text = "Потребности";
@@ -120,9 +122,9 @@
             this.buttonOpenDeals.BackColor = System.Drawing.Color.White;
             this.buttonOpenDeals.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonOpenDeals.Location = new System.Drawing.Point(2, 451);
-            this.buttonOpenDeals.Margin = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.buttonOpenDeals.Margin = new System.Windows.Forms.Padding(15);
             this.buttonOpenDeals.Name = "buttonOpenDeals";
-            this.buttonOpenDeals.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.buttonOpenDeals.Padding = new System.Windows.Forms.Padding(10);
             this.buttonOpenDeals.Size = new System.Drawing.Size(265, 48);
             this.buttonOpenDeals.TabIndex = 6;
             this.buttonOpenDeals.Text = "Сделки";
