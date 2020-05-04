@@ -239,7 +239,7 @@
             // Logo
             // 
             this.Logo.Image = ((System.Drawing.Image)(resources.GetObject("Logo.Image")));
-            this.Logo.Location = new System.Drawing.Point(500, 3);
+            this.Logo.Location = new System.Drawing.Point(491, 12);
             this.Logo.Name = "Logo";
             this.Logo.Size = new System.Drawing.Size(181, 51);
             this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
