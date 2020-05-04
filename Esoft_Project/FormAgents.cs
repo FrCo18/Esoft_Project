@@ -48,12 +48,12 @@ namespace Esoft_Project
                 agentSet.DealShare = dealShare;
                 if (dealShare < 0 || dealShare > 100)
                 {
-                    label4.ForeColor = Color.Red;
+                    labelDealShare.ForeColor = Color.Red;
                     return;
                 }
                 else
                 {
-                    label4.ForeColor = Color.Black;
+                    labelDealShare.ForeColor = Color.Black;
                 }
 
                 Program.wftDb.AgentsSet.Add(agentSet);

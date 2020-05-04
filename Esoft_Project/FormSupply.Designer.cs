@@ -46,6 +46,7 @@
             this.comboBoxClients = new System.Windows.Forms.ComboBox();
             this.comboBoxRealEstate = new System.Windows.Forms.ComboBox();
             this.Logo = new System.Windows.Forms.PictureBox();
+            this.Type = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -103,6 +104,7 @@
             this.listViewSupplySet.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Agent,
             this.Client,
+            this.Type,
             this.RealEstate,
             this.Price});
             this.listViewSupplySet.GridLines = true;
@@ -110,7 +112,7 @@
             this.listViewSupplySet.Location = new System.Drawing.Point(338, 69);
             this.listViewSupplySet.MultiSelect = false;
             this.listViewSupplySet.Name = "listViewSupplySet";
-            this.listViewSupplySet.Size = new System.Drawing.Size(318, 256);
+            this.listViewSupplySet.Size = new System.Drawing.Size(384, 256);
             this.listViewSupplySet.TabIndex = 5;
             this.listViewSupplySet.UseCompatibleStateImageBehavior = false;
             this.listViewSupplySet.View = System.Windows.Forms.View.Details;
@@ -204,18 +206,22 @@
             // Logo
             // 
             this.Logo.Image = ((System.Drawing.Image)(resources.GetObject("Logo.Image")));
-            this.Logo.Location = new System.Drawing.Point(475, 12);
+            this.Logo.Location = new System.Drawing.Point(577, 12);
             this.Logo.Name = "Logo";
-            this.Logo.Size = new System.Drawing.Size(181, 51);
+            this.Logo.Size = new System.Drawing.Size(176, 51);
             this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Logo.TabIndex = 20;
             this.Logo.TabStop = false;
+            // 
+            // Type
+            // 
+            this.Type.Text = "Тип";
             // 
             // FormSupply
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(670, 408);
+            this.ClientSize = new System.Drawing.Size(765, 408);
             this.Controls.Add(this.Logo);
             this.Controls.Add(this.comboBoxRealEstate);
             this.Controls.Add(this.comboBoxClients);
@@ -257,5 +263,6 @@
         private System.Windows.Forms.ComboBox comboBoxClients;
         private System.Windows.Forms.ComboBox comboBoxRealEstate;
         private System.Windows.Forms.PictureBox Logo;
+        private System.Windows.Forms.ColumnHeader Type;
     }
 }

@@ -25,7 +25,7 @@ namespace Esoft_Project
             comboBoxAgents.Items.Clear();
             foreach (AgentsSet agentsSet in Program.wftDb.AgentsSet)
             {
-                string[] item = { agentsSet.Id.ToString() + ":", agentsSet.LastName, agentsSet.FirstName[0].ToString()+".",agentsSet.MiddleName[0].ToString()+"."};
+                string[] item = { agentsSet.Id.ToString() + ":", agentsSet.LastName, agentsSet.FirstName[0]+".",agentsSet.MiddleName[0]+"."};
                 comboBoxAgents.Items.Add(string.Join(" ", item));
             }
         }
@@ -34,7 +34,7 @@ namespace Esoft_Project
             comboBoxClients.Items.Clear();
             foreach (ClientsSet clientsSet in Program.wftDb.ClientsSet)
             {
-                string[] item = { clientsSet.Id.ToString() + ":", clientsSet.LastName, clientsSet.FirstName[0].ToString()+".", clientsSet.MiddleName[0].ToString()+"." };
+                string[] item = { clientsSet.Id.ToString() + ":", clientsSet.LastName, clientsSet.FirstName[0]+".", clientsSet.MiddleName[0]+"." };
                 comboBoxClients.Items.Add(string.Join(" ", item));
             }
         }
@@ -50,16 +50,43 @@ namespace Esoft_Project
         }
         void ShowSupplySet()
         {
+            string type;
             listViewSupplySet.Items.Clear();
             foreach (SupplySet supply in Program.wftDb.SupplySet)
             {
-                ListViewItem item = new ListViewItem(new string[]
+                if (supply.RealEstateSet.Type == 0)
+                { type = "Квартира"; }
+                else if (supply.RealEstateSet.Type == 1)
+                { type = "Дом"; }
+                else { type = "Земля"; }
+                if (supply.RealEstateSet.Address_House != null && supply.RealEstateSet.Address_Number != null)
                 {
-                                        supply.IdAgent.ToString(), supply.IdClient.ToString(), supply.IdRealEstate.ToString(), supply.Price.ToString()
+                    ListViewItem item = new ListViewItem(new string[]
+                {
+                        supply.AgentsSet.LastName.ToString() + " " + supply.AgentsSet.FirstName[0] + ". " + supply.AgentsSet.MiddleName[0] + ".",
+                        supply.ClientsSet.LastName + " " + supply.ClientsSet.FirstName[0] + ". " + supply.ClientsSet.MiddleName[0] + ".",
+                        type,
+                    supply.RealEstateSet.Address_City + " ул." + supply.RealEstateSet.Address_Street + " " + supply.RealEstateSet.Address_House + " кв. №" + supply.RealEstateSet.Address_Number,
+                        supply.Price.ToString()
                 });
-                item.Tag = supply;
-                listViewSupplySet.Items.Add(item);
+                    item.Tag = supply;
+                    listViewSupplySet.Items.Add(item);
+                }
+                else
+                {
+                    ListViewItem item = new ListViewItem(new string[]
+                  {
+                        supply.AgentsSet.LastName.ToString() + " " + supply.AgentsSet.FirstName[0] + ". " + supply.AgentsSet.MiddleName[0] + ".",
+                        supply.ClientsSet.LastName + " " + supply.ClientsSet.FirstName[0] + ". " + supply.ClientsSet.MiddleName[0] + ".",
+                        type,
+                      supply.RealEstateSet.Address_City + " ул." + supply.RealEstateSet.Address_Street,
+                        supply.Price.ToString()
+                  });
+                    item.Tag = supply;
+                    listViewSupplySet.Items.Add(item);
+                }
             }
+            listViewSupplySet.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)

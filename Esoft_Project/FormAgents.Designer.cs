@@ -40,9 +40,9 @@
             this.textBoxMiddleNameAgent = new System.Windows.Forms.TextBox();
             this.textBoxDealShare = new System.Windows.Forms.TextBox();
             this.labelName = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelLastName = new System.Windows.Forms.Label();
+            this.labelMiddleName = new System.Windows.Forms.Label();
+            this.labelDealShare = new System.Windows.Forms.Label();
             this.buttonDel = new System.Windows.Forms.Button();
             this.buttonEdit = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
@@ -135,35 +135,35 @@
             this.labelName.TabIndex = 5;
             this.labelName.Text = "Имя";
             // 
-            // label2
+            // labelLastName
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(19, 119);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 15);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Фамилия";
+            this.labelLastName.AutoSize = true;
+            this.labelLastName.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelLastName.Location = new System.Drawing.Point(19, 119);
+            this.labelLastName.Name = "labelLastName";
+            this.labelLastName.Size = new System.Drawing.Size(62, 15);
+            this.labelLastName.TabIndex = 6;
+            this.labelLastName.Text = "Фамилия";
             // 
-            // label3
+            // labelMiddleName
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(19, 168);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 15);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Отчество";
+            this.labelMiddleName.AutoSize = true;
+            this.labelMiddleName.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMiddleName.Location = new System.Drawing.Point(19, 168);
+            this.labelMiddleName.Name = "labelMiddleName";
+            this.labelMiddleName.Size = new System.Drawing.Size(63, 15);
+            this.labelMiddleName.TabIndex = 7;
+            this.labelMiddleName.Text = "Отчество";
             // 
-            // label4
+            // labelDealShare
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(19, 222);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(108, 15);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Доля от комисии";
+            this.labelDealShare.AutoSize = true;
+            this.labelDealShare.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelDealShare.Location = new System.Drawing.Point(19, 222);
+            this.labelDealShare.Name = "labelDealShare";
+            this.labelDealShare.Size = new System.Drawing.Size(108, 15);
+            this.labelDealShare.TabIndex = 8;
+            this.labelDealShare.Text = "Доля от комисии";
             // 
             // buttonDel
             // 
@@ -226,9 +226,9 @@
             this.Controls.Add(this.buttonDel);
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.buttonAdd);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelDealShare);
+            this.Controls.Add(this.labelMiddleName);
+            this.Controls.Add(this.labelLastName);
             this.Controls.Add(this.labelName);
             this.Controls.Add(this.textBoxDealShare);
             this.Controls.Add(this.textBoxMiddleNameAgent);
@@ -257,9 +257,9 @@
         private System.Windows.Forms.TextBox textBoxMiddleNameAgent;
         private System.Windows.Forms.TextBox textBoxDealShare;
         private System.Windows.Forms.Label labelName;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelLastName;
+        private System.Windows.Forms.Label labelMiddleName;
+        private System.Windows.Forms.Label labelDealShare;
         private System.Windows.Forms.Button buttonDel;
         private System.Windows.Forms.Button buttonEdit;
         private System.Windows.Forms.Button buttonAdd;
