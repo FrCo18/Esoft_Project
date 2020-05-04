@@ -54,7 +54,7 @@
             this.textBoxPrice.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxPrice.Location = new System.Drawing.Point(15, 302);
             this.textBoxPrice.Name = "textBoxPrice";
-            this.textBoxPrice.Size = new System.Drawing.Size(121, 23);
+            this.textBoxPrice.Size = new System.Drawing.Size(263, 23);
             this.textBoxPrice.TabIndex = 0;
             this.textBoxPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPrice_KeyPress);
             // 
@@ -107,13 +107,14 @@
             this.Price});
             this.listViewSupplySet.GridLines = true;
             this.listViewSupplySet.HideSelection = false;
-            this.listViewSupplySet.Location = new System.Drawing.Point(161, 69);
+            this.listViewSupplySet.Location = new System.Drawing.Point(338, 69);
             this.listViewSupplySet.MultiSelect = false;
             this.listViewSupplySet.Name = "listViewSupplySet";
             this.listViewSupplySet.Size = new System.Drawing.Size(318, 256);
             this.listViewSupplySet.TabIndex = 5;
             this.listViewSupplySet.UseCompatibleStateImageBehavior = false;
             this.listViewSupplySet.View = System.Windows.Forms.View.Details;
+            this.listViewSupplySet.SelectedIndexChanged += new System.EventHandler(this.listViewSupplySet_SelectedIndexChanged);
             // 
             // Agent
             // 
@@ -144,6 +145,7 @@
             this.buttonDel.TabIndex = 16;
             this.buttonDel.Text = "Удалить";
             this.buttonDel.UseVisualStyleBackColor = false;
+            this.buttonDel.Click += new System.EventHandler(this.buttonDel_Click);
             // 
             // buttonEdit
             // 
@@ -178,7 +180,7 @@
             this.comboBoxAgents.FormattingEnabled = true;
             this.comboBoxAgents.Location = new System.Drawing.Point(15, 87);
             this.comboBoxAgents.Name = "comboBoxAgents";
-            this.comboBoxAgents.Size = new System.Drawing.Size(121, 23);
+            this.comboBoxAgents.Size = new System.Drawing.Size(263, 23);
             this.comboBoxAgents.TabIndex = 17;
             // 
             // comboBoxClients
@@ -187,7 +189,7 @@
             this.comboBoxClients.FormattingEnabled = true;
             this.comboBoxClients.Location = new System.Drawing.Point(15, 157);
             this.comboBoxClients.Name = "comboBoxClients";
-            this.comboBoxClients.Size = new System.Drawing.Size(121, 23);
+            this.comboBoxClients.Size = new System.Drawing.Size(263, 23);
             this.comboBoxClients.TabIndex = 18;
             // 
             // comboBoxRealEstate
@@ -196,13 +198,13 @@
             this.comboBoxRealEstate.FormattingEnabled = true;
             this.comboBoxRealEstate.Location = new System.Drawing.Point(18, 242);
             this.comboBoxRealEstate.Name = "comboBoxRealEstate";
-            this.comboBoxRealEstate.Size = new System.Drawing.Size(121, 23);
+            this.comboBoxRealEstate.Size = new System.Drawing.Size(260, 23);
             this.comboBoxRealEstate.TabIndex = 19;
             // 
             // Logo
             // 
             this.Logo.Image = ((System.Drawing.Image)(resources.GetObject("Logo.Image")));
-            this.Logo.Location = new System.Drawing.Point(367, 12);
+            this.Logo.Location = new System.Drawing.Point(475, 12);
             this.Logo.Name = "Logo";
             this.Logo.Size = new System.Drawing.Size(181, 51);
             this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -213,7 +215,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(560, 408);
+            this.ClientSize = new System.Drawing.Size(670, 408);
             this.Controls.Add(this.Logo);
             this.Controls.Add(this.comboBoxRealEstate);
             this.Controls.Add(this.comboBoxClients);
@@ -229,7 +231,7 @@
             this.Controls.Add(this.textBoxPrice);
             this.Name = "FormSupply";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormSupply";
+            this.Text = "Предложения";
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

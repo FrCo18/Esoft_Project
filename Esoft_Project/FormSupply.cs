@@ -73,6 +73,7 @@ namespace Esoft_Project
                 supply.Price = Convert.ToInt64(textBoxPrice.Text);
                 Program.wftDb.SupplySet.Add(supply);
                 Program.wftDb.SaveChanges();
+                ShowSupplySet();
             }
             else MessageBox.Show("Данные не выбраны","Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
@@ -83,6 +84,47 @@ namespace Esoft_Project
             if (!Char.IsDigit(num) && num != 8 || num == 127)
             {
                 e.Handled = true;
+            }
+        }
+
+        private void listViewSupplySet_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listViewSupplySet.SelectedItems.Count == 1)
+            {
+                SupplySet supply = listViewSupplySet.SelectedItems[0].Tag as SupplySet;
+                comboBoxAgents.SelectedIndex = comboBoxAgents.FindString(supply.IdAgent.ToString());
+                comboBoxClients.SelectedIndex = comboBoxClients.FindString(supply.IdClient.ToString());
+                comboBoxRealEstate.SelectedIndex = comboBoxRealEstate.FindString(supply.IdRealEstate.ToString());
+                textBoxPrice.Text = supply.Price.ToString();
+            }
+            else 
+            {
+                comboBoxAgents.SelectedItem = null;
+                comboBoxClients.SelectedItem = null;
+                comboBoxRealEstate.SelectedItem = null;
+                textBoxPrice.Text = "";
+            }
+        }
+
+        private void buttonDel_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (listViewSupplySet.SelectedItems.Count == 1)
+                {
+                    SupplySet supply = listViewSupplySet.SelectedItems[0].Tag as SupplySet;
+                    Program.wftDb.SupplySet.Remove(supply);
+                    Program.wftDb.SaveChanges();
+                    ShowSupplySet();
+                }
+                comboBoxAgents.SelectedItem = null;
+                comboBoxClients.SelectedItem = null;
+                comboBoxRealEstate.SelectedItem = null;
+                textBoxPrice.Text = "";
+            }
+            catch
+            {
+                MessageBox.Show("Невозможно удалить, эта запись используется", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
