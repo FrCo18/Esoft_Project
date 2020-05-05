@@ -154,5 +154,27 @@ namespace Esoft_Project
                 MessageBox.Show("Невозможно удалить, эта запись используется", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void buttonEdit_Click(object sender, EventArgs e)
+        {
+            if (listViewSupplySet.SelectedItems.Count == 1)
+            {
+                SupplySet supply = listViewSupplySet.SelectedItems[0].Tag as SupplySet;
+                supply.IdAgent = Convert.ToInt32(comboBoxAgents.SelectedItem.ToString().Split(':')[0]);
+                supply.IdClient = Convert.ToInt32(comboBoxClients.SelectedItem.ToString().Split(':')[0]); ;
+                supply.IdRealEstate = Convert.ToInt32(comboBoxRealEstate.SelectedItem.ToString().Split(':')[0]);
+                supply.Price = Convert.ToInt32(textBoxPrice.Text);
+                Program.wftDb.SaveChanges();
+                ShowSupplySet();
+            }
+        }
+        private void comboBoxKeyPressFalse(object sender, KeyPressEventArgs e)
+        {
+            char num = e.KeyChar;
+            if (num == e.KeyChar)
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

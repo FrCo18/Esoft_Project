@@ -37,16 +37,16 @@
             this.listViewSupplySet = new System.Windows.Forms.ListView();
             this.Agent = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Client = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Type = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.RealEstate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Price = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.buttonDel = new System.Windows.Forms.Button();
-            this.buttonEdit = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.comboBoxAgents = new System.Windows.Forms.ComboBox();
             this.comboBoxClients = new System.Windows.Forms.ComboBox();
             this.comboBoxRealEstate = new System.Windows.Forms.ComboBox();
             this.Logo = new System.Windows.Forms.PictureBox();
-            this.Type = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.buttonEdit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -126,6 +126,10 @@
             // 
             this.Client.Text = "Клиент";
             // 
+            // Type
+            // 
+            this.Type.Text = "Тип";
+            // 
             // RealEstate
             // 
             this.RealEstate.Text = "Объект недвижимости";
@@ -139,7 +143,7 @@
             // 
             this.buttonDel.BackColor = System.Drawing.Color.White;
             this.buttonDel.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonDel.Location = new System.Drawing.Point(338, 343);
+            this.buttonDel.Location = new System.Drawing.Point(591, 343);
             this.buttonDel.Margin = new System.Windows.Forms.Padding(15);
             this.buttonDel.Name = "buttonDel";
             this.buttonDel.Padding = new System.Windows.Forms.Padding(10);
@@ -149,24 +153,11 @@
             this.buttonDel.UseVisualStyleBackColor = false;
             this.buttonDel.Click += new System.EventHandler(this.buttonDel_Click);
             // 
-            // buttonEdit
-            // 
-            this.buttonEdit.BackColor = System.Drawing.Color.White;
-            this.buttonEdit.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonEdit.Location = new System.Drawing.Point(187, 343);
-            this.buttonEdit.Margin = new System.Windows.Forms.Padding(15);
-            this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Padding = new System.Windows.Forms.Padding(10);
-            this.buttonEdit.Size = new System.Drawing.Size(141, 53);
-            this.buttonEdit.TabIndex = 15;
-            this.buttonEdit.Text = "Изменить";
-            this.buttonEdit.UseVisualStyleBackColor = false;
-            // 
             // buttonAdd
             // 
             this.buttonAdd.BackColor = System.Drawing.Color.White;
             this.buttonAdd.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonAdd.Location = new System.Drawing.Point(39, 343);
+            this.buttonAdd.Location = new System.Drawing.Point(249, 343);
             this.buttonAdd.Margin = new System.Windows.Forms.Padding(15);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Padding = new System.Windows.Forms.Padding(10);
@@ -184,6 +175,7 @@
             this.comboBoxAgents.Name = "comboBoxAgents";
             this.comboBoxAgents.Size = new System.Drawing.Size(263, 23);
             this.comboBoxAgents.TabIndex = 17;
+            this.comboBoxAgents.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBoxKeyPressFalse);
             // 
             // comboBoxClients
             // 
@@ -193,6 +185,7 @@
             this.comboBoxClients.Name = "comboBoxClients";
             this.comboBoxClients.Size = new System.Drawing.Size(263, 23);
             this.comboBoxClients.TabIndex = 18;
+            this.comboBoxClients.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBoxKeyPressFalse);
             // 
             // comboBoxRealEstate
             // 
@@ -202,6 +195,7 @@
             this.comboBoxRealEstate.Name = "comboBoxRealEstate";
             this.comboBoxRealEstate.Size = new System.Drawing.Size(260, 23);
             this.comboBoxRealEstate.TabIndex = 19;
+            this.comboBoxRealEstate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBoxKeyPressFalse);
             // 
             // Logo
             // 
@@ -213,21 +207,31 @@
             this.Logo.TabIndex = 20;
             this.Logo.TabStop = false;
             // 
-            // Type
+            // buttonEdit
             // 
-            this.Type.Text = "Тип";
+            this.buttonEdit.BackColor = System.Drawing.Color.White;
+            this.buttonEdit.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonEdit.Location = new System.Drawing.Point(420, 343);
+            this.buttonEdit.Margin = new System.Windows.Forms.Padding(15);
+            this.buttonEdit.Name = "buttonEdit";
+            this.buttonEdit.Padding = new System.Windows.Forms.Padding(10);
+            this.buttonEdit.Size = new System.Drawing.Size(141, 53);
+            this.buttonEdit.TabIndex = 21;
+            this.buttonEdit.Text = "Изменить";
+            this.buttonEdit.UseVisualStyleBackColor = false;
+            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // FormSupply
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(765, 408);
+            this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.Logo);
             this.Controls.Add(this.comboBoxRealEstate);
             this.Controls.Add(this.comboBoxClients);
             this.Controls.Add(this.comboBoxAgents);
             this.Controls.Add(this.buttonDel);
-            this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.listViewSupplySet);
             this.Controls.Add(this.labelPrice);
@@ -257,12 +261,12 @@
         private System.Windows.Forms.ColumnHeader RealEstate;
         private System.Windows.Forms.ColumnHeader Price;
         private System.Windows.Forms.Button buttonDel;
-        private System.Windows.Forms.Button buttonEdit;
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.ComboBox comboBoxAgents;
         private System.Windows.Forms.ComboBox comboBoxClients;
         private System.Windows.Forms.ComboBox comboBoxRealEstate;
         private System.Windows.Forms.PictureBox Logo;
         private System.Windows.Forms.ColumnHeader Type;
+        private System.Windows.Forms.Button buttonEdit;
     }
 }
