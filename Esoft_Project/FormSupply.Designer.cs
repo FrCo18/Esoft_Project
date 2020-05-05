@@ -53,9 +53,9 @@
             // textBoxPrice
             // 
             this.textBoxPrice.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxPrice.Location = new System.Drawing.Point(15, 302);
+            this.textBoxPrice.Location = new System.Drawing.Point(17, 348);
             this.textBoxPrice.Name = "textBoxPrice";
-            this.textBoxPrice.Size = new System.Drawing.Size(263, 23);
+            this.textBoxPrice.Size = new System.Drawing.Size(306, 23);
             this.textBoxPrice.TabIndex = 0;
             this.textBoxPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPrice_KeyPress);
             // 
@@ -63,7 +63,7 @@
             // 
             this.labelAgent.AutoSize = true;
             this.labelAgent.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelAgent.Location = new System.Drawing.Point(15, 69);
+            this.labelAgent.Location = new System.Drawing.Point(17, 80);
             this.labelAgent.Name = "labelAgent";
             this.labelAgent.Size = new System.Drawing.Size(56, 15);
             this.labelAgent.TabIndex = 1;
@@ -73,7 +73,7 @@
             // 
             this.labelClient.AutoSize = true;
             this.labelClient.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelClient.Location = new System.Drawing.Point(15, 133);
+            this.labelClient.Location = new System.Drawing.Point(17, 153);
             this.labelClient.Name = "labelClient";
             this.labelClient.Size = new System.Drawing.Size(49, 15);
             this.labelClient.TabIndex = 2;
@@ -83,7 +83,7 @@
             // 
             this.labelRealEstate.AutoSize = true;
             this.labelRealEstate.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelRealEstate.Location = new System.Drawing.Point(12, 213);
+            this.labelRealEstate.Location = new System.Drawing.Point(14, 246);
             this.labelRealEstate.Name = "labelRealEstate";
             this.labelRealEstate.Size = new System.Drawing.Size(143, 15);
             this.labelRealEstate.TabIndex = 3;
@@ -93,7 +93,7 @@
             // 
             this.labelPrice.AutoSize = true;
             this.labelPrice.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelPrice.Location = new System.Drawing.Point(12, 284);
+            this.labelPrice.Location = new System.Drawing.Point(14, 328);
             this.labelPrice.Name = "labelPrice";
             this.labelPrice.Size = new System.Drawing.Size(37, 15);
             this.labelPrice.TabIndex = 4;
@@ -109,10 +109,10 @@
             this.Price});
             this.listViewSupplySet.GridLines = true;
             this.listViewSupplySet.HideSelection = false;
-            this.listViewSupplySet.Location = new System.Drawing.Point(338, 69);
+            this.listViewSupplySet.Location = new System.Drawing.Point(394, 80);
             this.listViewSupplySet.MultiSelect = false;
             this.listViewSupplySet.Name = "listViewSupplySet";
-            this.listViewSupplySet.Size = new System.Drawing.Size(384, 256);
+            this.listViewSupplySet.Size = new System.Drawing.Size(447, 295);
             this.listViewSupplySet.TabIndex = 5;
             this.listViewSupplySet.UseCompatibleStateImageBehavior = false;
             this.listViewSupplySet.View = System.Windows.Forms.View.Details;
@@ -143,11 +143,11 @@
             // 
             this.buttonDel.BackColor = System.Drawing.Color.White;
             this.buttonDel.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonDel.Location = new System.Drawing.Point(591, 343);
-            this.buttonDel.Margin = new System.Windows.Forms.Padding(15);
+            this.buttonDel.Location = new System.Drawing.Point(689, 396);
+            this.buttonDel.Margin = new System.Windows.Forms.Padding(17, 17, 17, 17);
             this.buttonDel.Name = "buttonDel";
-            this.buttonDel.Padding = new System.Windows.Forms.Padding(10);
-            this.buttonDel.Size = new System.Drawing.Size(141, 53);
+            this.buttonDel.Padding = new System.Windows.Forms.Padding(12, 12, 12, 12);
+            this.buttonDel.Size = new System.Drawing.Size(164, 61);
             this.buttonDel.TabIndex = 16;
             this.buttonDel.Text = "Удалить";
             this.buttonDel.UseVisualStyleBackColor = false;
@@ -157,11 +157,11 @@
             // 
             this.buttonAdd.BackColor = System.Drawing.Color.White;
             this.buttonAdd.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonAdd.Location = new System.Drawing.Point(249, 343);
-            this.buttonAdd.Margin = new System.Windows.Forms.Padding(15);
+            this.buttonAdd.Location = new System.Drawing.Point(290, 396);
+            this.buttonAdd.Margin = new System.Windows.Forms.Padding(17, 17, 17, 17);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Padding = new System.Windows.Forms.Padding(10);
-            this.buttonAdd.Size = new System.Drawing.Size(141, 53);
+            this.buttonAdd.Padding = new System.Windows.Forms.Padding(12, 12, 12, 12);
+            this.buttonAdd.Size = new System.Drawing.Size(164, 61);
             this.buttonAdd.TabIndex = 14;
             this.buttonAdd.Text = "Создать";
             this.buttonAdd.UseVisualStyleBackColor = false;
@@ -171,9 +171,9 @@
             // 
             this.comboBoxAgents.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBoxAgents.FormattingEnabled = true;
-            this.comboBoxAgents.Location = new System.Drawing.Point(15, 87);
+            this.comboBoxAgents.Location = new System.Drawing.Point(17, 100);
             this.comboBoxAgents.Name = "comboBoxAgents";
-            this.comboBoxAgents.Size = new System.Drawing.Size(263, 23);
+            this.comboBoxAgents.Size = new System.Drawing.Size(306, 23);
             this.comboBoxAgents.TabIndex = 17;
             this.comboBoxAgents.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBoxKeyPressFalse);
             // 
@@ -181,9 +181,9 @@
             // 
             this.comboBoxClients.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBoxClients.FormattingEnabled = true;
-            this.comboBoxClients.Location = new System.Drawing.Point(15, 157);
+            this.comboBoxClients.Location = new System.Drawing.Point(17, 181);
             this.comboBoxClients.Name = "comboBoxClients";
-            this.comboBoxClients.Size = new System.Drawing.Size(263, 23);
+            this.comboBoxClients.Size = new System.Drawing.Size(306, 23);
             this.comboBoxClients.TabIndex = 18;
             this.comboBoxClients.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBoxKeyPressFalse);
             // 
@@ -191,18 +191,18 @@
             // 
             this.comboBoxRealEstate.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBoxRealEstate.FormattingEnabled = true;
-            this.comboBoxRealEstate.Location = new System.Drawing.Point(18, 242);
+            this.comboBoxRealEstate.Location = new System.Drawing.Point(21, 279);
             this.comboBoxRealEstate.Name = "comboBoxRealEstate";
-            this.comboBoxRealEstate.Size = new System.Drawing.Size(260, 23);
+            this.comboBoxRealEstate.Size = new System.Drawing.Size(303, 23);
             this.comboBoxRealEstate.TabIndex = 19;
             this.comboBoxRealEstate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBoxKeyPressFalse);
             // 
             // Logo
             // 
             this.Logo.Image = ((System.Drawing.Image)(resources.GetObject("Logo.Image")));
-            this.Logo.Location = new System.Drawing.Point(577, 12);
+            this.Logo.Location = new System.Drawing.Point(673, 14);
             this.Logo.Name = "Logo";
-            this.Logo.Size = new System.Drawing.Size(176, 51);
+            this.Logo.Size = new System.Drawing.Size(205, 59);
             this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Logo.TabIndex = 20;
             this.Logo.TabStop = false;
@@ -211,11 +211,11 @@
             // 
             this.buttonEdit.BackColor = System.Drawing.Color.White;
             this.buttonEdit.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonEdit.Location = new System.Drawing.Point(420, 343);
-            this.buttonEdit.Margin = new System.Windows.Forms.Padding(15);
+            this.buttonEdit.Location = new System.Drawing.Point(490, 396);
+            this.buttonEdit.Margin = new System.Windows.Forms.Padding(17, 17, 17, 17);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Padding = new System.Windows.Forms.Padding(10);
-            this.buttonEdit.Size = new System.Drawing.Size(141, 53);
+            this.buttonEdit.Padding = new System.Windows.Forms.Padding(12, 12, 12, 12);
+            this.buttonEdit.Size = new System.Drawing.Size(164, 61);
             this.buttonEdit.TabIndex = 21;
             this.buttonEdit.Text = "Изменить";
             this.buttonEdit.UseVisualStyleBackColor = false;
@@ -223,9 +223,9 @@
             // 
             // FormSupply
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(765, 408);
+            this.ClientSize = new System.Drawing.Size(892, 471);
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.Logo);
             this.Controls.Add(this.comboBoxRealEstate);
@@ -239,6 +239,7 @@
             this.Controls.Add(this.labelClient);
             this.Controls.Add(this.labelAgent);
             this.Controls.Add(this.textBoxPrice);
+            this.Font = new System.Drawing.Font("Roboto Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Name = "FormSupply";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Предложения";

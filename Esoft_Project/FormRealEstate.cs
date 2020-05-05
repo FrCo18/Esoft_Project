@@ -160,16 +160,25 @@ namespace Esoft_Project
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             RealEstateSet realEstateSet = new RealEstateSet();
+            realEstateSet.Type = comboBoxType.SelectedIndex;
             realEstateSet.Address_City = textBoxAdress_City.Text;
-            realEstateSet.Address_House = textBoxAddress_House.Text;
             realEstateSet.Address_Street = textBoxAddress_Street.Text;
-            realEstateSet.Address_Number = textBoxAddress_Number.Text;
             if (textBoxLongtitude.Text != "") { realEstateSet.Coordinate_longitude = Convert.ToDouble(textBoxLongtitude.Text); }
             if (textBoxLatitude.Text != "") { realEstateSet.Coordinate_latitude = Convert.ToDouble(textBoxLatitude.Text); }
-            if (textBoxFloors_Number.Text != "") { realEstateSet.TotalFloors = Convert.ToInt32(textBoxFloors_Number.Text); }
-            if (textBoxFloor.Text != "") { realEstateSet.Floor = Convert.ToInt32(textBoxFloor.Text); }
-            if (textBoxRooms.Text != "") { realEstateSet.Rooms = Convert.ToInt32(textBoxRooms.Text); }
-            realEstateSet.Type = comboBoxType.SelectedIndex;
+            if (comboBoxType.SelectedIndex == 0)
+            {
+                realEstateSet.Address_House = textBoxAddress_House.Text;
+                realEstateSet.Address_Number = textBoxAddress_Number.Text;
+                if (textBoxFloors_Number.Text != "") { realEstateSet.TotalFloors = Convert.ToInt32(textBoxFloors_Number.Text); }
+                if (textBoxFloor.Text != "") { realEstateSet.Floor = Convert.ToInt32(textBoxFloor.Text); }
+                if (textBoxRooms.Text != "") { realEstateSet.Rooms = Convert.ToInt32(textBoxRooms.Text); }
+            }
+            else if (comboBoxType.SelectedIndex == 1)
+            {
+                realEstateSet.Address_House = textBoxAddress_House.Text;
+                realEstateSet.Address_Number = textBoxAddress_Number.Text;
+                if (textBoxRooms.Text != "") { realEstateSet.Rooms = Convert.ToInt32(textBoxRooms.Text); }
+            }
             Program.wftDb.RealEstateSet.Add(realEstateSet);
             Program.wftDb.SaveChanges();
             ShowRealEstatesSet();
@@ -212,20 +221,29 @@ namespace Esoft_Project
         {
             //ограничение на заполнение значений в долготу
             char number = e.KeyChar;
-            if (!textBoxLongtitude.Text.Contains(","))
-            {
-                if (!Char.IsDigit(number) && number != 8 && number != 44 || number == 127)
-                {
-                    e.Handled = true;
-
-                }
-            }
-            else
+            if (textBoxLongtitude.Text == "")
             {
                 if (!Char.IsDigit(number) && number != 8 || number == 127)
                 {
                     e.Handled = true;
+                }
+            }
+            else
+            {
+                if (!textBoxLongtitude.Text.Contains(","))
+                {
+                    if (!Char.IsDigit(number) && number != 8 && number != 44 || number == 127)
+                    {
+                            e.Handled = true;
 
+                    }
+                }
+                else 
+                {
+                    if (!Char.IsDigit(number) && number != 8 || number == 127)
+                    {
+                        e.Handled = true;
+                    }
                 }
             }
         }
@@ -234,20 +252,29 @@ namespace Esoft_Project
         {
             //ограничение на заполнение значений в Площаде
             char number = e.KeyChar;
-            if (!textBoxTotalArea.Text.Contains(","))
-            {
-                if (!Char.IsDigit(number) && number != 8 && number != 44 || number == 127)
-                {
-                    e.Handled = true;
-
-                }
-            }
-            else
+            if (textBoxTotalArea.Text == "")
             {
                 if (!Char.IsDigit(number) && number != 8 || number == 127)
                 {
                     e.Handled = true;
+                }
+            }
+            else
+            {
+                if (!textBoxTotalArea.Text.Contains(","))
+                {
+                    if (!Char.IsDigit(number) && number != 8 && number != 44 || number == 127)
+                    {
+                        e.Handled = true;
 
+                    }
+                }
+                else
+                {
+                    if (!Char.IsDigit(number) && number != 8 || number == 127)
+                    {
+                        e.Handled = true;
+                    }
                 }
             }
         }
@@ -256,20 +283,29 @@ namespace Esoft_Project
         {
             //ограничение на заполнение значений в широте
             char number = e.KeyChar;
-            if (!textBoxLatitude.Text.Contains(","))
-            {
-                if (!Char.IsDigit(number) && number != 8 && number != 44 || number == 127)
-                {
-                    e.Handled = true;
-
-                }
-            }
-            else
+            if (textBoxLatitude.Text == "")
             {
                 if (!Char.IsDigit(number) && number != 8 || number == 127)
                 {
                     e.Handled = true;
+                }
+            }
+            else
+            {
+                if (!textBoxLatitude.Text.Contains(","))
+                {
+                    if (!Char.IsDigit(number) && number != 8 && number != 44 || number == 127)
+                    {
+                        e.Handled = true;
 
+                    }
+                }
+                else
+                {
+                    if (!Char.IsDigit(number) && number != 8 || number == 127)
+                    {
+                        e.Handled = true;
+                    }
                 }
             }
         }
@@ -377,7 +413,7 @@ namespace Esoft_Project
         {
             if (comboBoxType.SelectedIndex == 0)
             {
-                if (listViewLand.SelectedItems.Count == 1)
+                if (listViewApartament.SelectedItems.Count == 1)
                 {
                     RealEstateSet realEstateSet = listViewApartament.SelectedItems[0].Tag as RealEstateSet;
                     Program.wftDb.RealEstateSet.Remove(realEstateSet);
@@ -387,7 +423,7 @@ namespace Esoft_Project
             }
             else if (comboBoxType.SelectedIndex == 1)
             {
-                if (listViewLand.SelectedItems.Count == 1)
+                if (listViewHouse.SelectedItems.Count == 1)
                 {
                     RealEstateSet realEstateSet = listViewHouse.SelectedItems[0].Tag as RealEstateSet;
                     Program.wftDb.RealEstateSet.Remove(realEstateSet);
@@ -404,6 +440,15 @@ namespace Esoft_Project
                     Program.wftDb.SaveChanges();
                     ShowRealEstatesSet();
                 }
+            }
+        }
+
+        private void ComboBoxPressFalse(object sender, KeyPressEventArgs e)
+        {
+            char num = e.KeyChar;
+            if (num == e.KeyChar)
+            {
+                e.Handled = true;
             }
         }
     }

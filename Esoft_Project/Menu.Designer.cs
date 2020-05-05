@@ -33,8 +33,8 @@
             this.buttonOpenClients = new System.Windows.Forms.Button();
             this.buttonOpenAgents = new System.Windows.Forms.Button();
             this.buttonOpenRealEstates = new System.Windows.Forms.Button();
+            this.buttonOpenSupplis = new System.Windows.Forms.Button();
             this.buttonOpenDemands = new System.Windows.Forms.Button();
-            this.buttonOpenSupplies = new System.Windows.Forms.Button();
             this.buttonOpenDeals = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -91,32 +91,33 @@
             this.buttonOpenRealEstates.UseVisualStyleBackColor = false;
             this.buttonOpenRealEstates.Click += new System.EventHandler(this.buttonOpenRealEstates_Click);
             // 
+            // buttonOpenSupplis
+            // 
+            this.buttonOpenSupplis.BackColor = System.Drawing.Color.White;
+            this.buttonOpenSupplis.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonOpenSupplis.Location = new System.Drawing.Point(2, 343);
+            this.buttonOpenSupplis.Margin = new System.Windows.Forms.Padding(15);
+            this.buttonOpenSupplis.Name = "buttonOpenSupplis";
+            this.buttonOpenSupplis.Padding = new System.Windows.Forms.Padding(10);
+            this.buttonOpenSupplis.Size = new System.Drawing.Size(265, 48);
+            this.buttonOpenSupplis.TabIndex = 4;
+            this.buttonOpenSupplis.Text = "Предложения";
+            this.buttonOpenSupplis.UseVisualStyleBackColor = false;
+            this.buttonOpenSupplis.Click += new System.EventHandler(this.buttonOpenDemands_Click);
+            // 
             // buttonOpenDemands
             // 
             this.buttonOpenDemands.BackColor = System.Drawing.Color.White;
             this.buttonOpenDemands.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonOpenDemands.Location = new System.Drawing.Point(2, 343);
+            this.buttonOpenDemands.Location = new System.Drawing.Point(2, 397);
             this.buttonOpenDemands.Margin = new System.Windows.Forms.Padding(15);
             this.buttonOpenDemands.Name = "buttonOpenDemands";
             this.buttonOpenDemands.Padding = new System.Windows.Forms.Padding(10);
             this.buttonOpenDemands.Size = new System.Drawing.Size(265, 48);
-            this.buttonOpenDemands.TabIndex = 4;
-            this.buttonOpenDemands.Text = "Предложения";
+            this.buttonOpenDemands.TabIndex = 5;
+            this.buttonOpenDemands.Text = "Потребности";
             this.buttonOpenDemands.UseVisualStyleBackColor = false;
-            this.buttonOpenDemands.Click += new System.EventHandler(this.buttonOpenDemands_Click);
-            // 
-            // buttonOpenSupplies
-            // 
-            this.buttonOpenSupplies.BackColor = System.Drawing.Color.White;
-            this.buttonOpenSupplies.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonOpenSupplies.Location = new System.Drawing.Point(2, 395);
-            this.buttonOpenSupplies.Margin = new System.Windows.Forms.Padding(15);
-            this.buttonOpenSupplies.Name = "buttonOpenSupplies";
-            this.buttonOpenSupplies.Padding = new System.Windows.Forms.Padding(10);
-            this.buttonOpenSupplies.Size = new System.Drawing.Size(265, 48);
-            this.buttonOpenSupplies.TabIndex = 5;
-            this.buttonOpenSupplies.Text = "Потребности";
-            this.buttonOpenSupplies.UseVisualStyleBackColor = false;
+            this.buttonOpenDemands.Click += new System.EventHandler(this.buttonOpenDemands_Click_1);
             // 
             // buttonOpenDeals
             // 
@@ -137,8 +138,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(279, 561);
             this.Controls.Add(this.buttonOpenDeals);
-            this.Controls.Add(this.buttonOpenSupplies);
             this.Controls.Add(this.buttonOpenDemands);
+            this.Controls.Add(this.buttonOpenSupplis);
             this.Controls.Add(this.buttonOpenRealEstates);
             this.Controls.Add(this.buttonOpenAgents);
             this.Controls.Add(this.buttonOpenClients);
@@ -157,8 +158,8 @@
         private System.Windows.Forms.Button buttonOpenClients;
         private System.Windows.Forms.Button buttonOpenAgents;
         private System.Windows.Forms.Button buttonOpenRealEstates;
+        private System.Windows.Forms.Button buttonOpenSupplis;
         private System.Windows.Forms.Button buttonOpenDemands;
-        private System.Windows.Forms.Button buttonOpenSupplies;
         private System.Windows.Forms.Button buttonOpenDeals;
     }
 }

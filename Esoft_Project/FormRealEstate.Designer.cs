@@ -217,6 +217,7 @@
             this.comboBoxType.Size = new System.Drawing.Size(100, 23);
             this.comboBoxType.TabIndex = 16;
             this.comboBoxType.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBoxType.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ComboBoxPressFalse);
             // 
             // label_latitide
             // 
