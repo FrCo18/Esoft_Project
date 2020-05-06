@@ -367,7 +367,6 @@ namespace Esoft_Project
                     if (!Char.IsDigit(number) && number != 8 && number != 44 || number == 127)
                     {
                         e.Handled = true;
-
                     }
                 }
                 else

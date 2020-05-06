@@ -165,6 +165,7 @@ namespace Esoft_Project
             realEstateSet.Address_Street = textBoxAddress_Street.Text;
             if (textBoxLongtitude.Text != "") { realEstateSet.Coordinate_longitude = Convert.ToDouble(textBoxLongtitude.Text); }
             if (textBoxLatitude.Text != "") { realEstateSet.Coordinate_latitude = Convert.ToDouble(textBoxLatitude.Text); }
+            if (textBoxTotalArea.Text != "") { realEstateSet.TotalArea = Convert.ToDouble(textBoxTotalArea.Text); }
             if (comboBoxType.SelectedIndex == 0)
             {
                 realEstateSet.Address_House = textBoxAddress_House.Text;
@@ -326,6 +327,7 @@ namespace Esoft_Project
                     if (textBoxFloors_Number.Text != "") { realEstateSet.TotalFloors = Convert.ToInt32(textBoxFloors_Number.Text); }
                     if (textBoxFloor.Text != "") { realEstateSet.Floor = Convert.ToInt32(textBoxFloor.Text); }
                     if (textBoxRooms.Text != "") { realEstateSet.Rooms = Convert.ToInt32(textBoxRooms.Text); }
+                    if (textBoxTotalArea.Text != "") { realEstateSet.TotalArea = Convert.ToDouble(textBoxTotalArea.Text); }
                     realEstateSet.Type = comboBoxType.SelectedIndex;
                     Program.wftDb.SaveChanges();
                     ShowRealEstatesSet();
@@ -343,12 +345,13 @@ namespace Esoft_Project
                     if (textBoxLatitude.Text != "") { realEstateSet.Coordinate_latitude = Convert.ToDouble(textBoxLatitude.Text); }
                     if (textBoxFloors_Number.Text != "") { realEstateSet.TotalFloors = Convert.ToInt32(textBoxFloors_Number.Text); }
                     if (textBoxRooms.Text != "") { realEstateSet.Rooms = Convert.ToInt32(textBoxRooms.Text); }
+                    if (textBoxTotalArea.Text != "") { realEstateSet.TotalArea = Convert.ToDouble(textBoxTotalArea.Text); }
                     realEstateSet.Type = comboBoxType.SelectedIndex;
                     Program.wftDb.SaveChanges();
                     ShowRealEstatesSet();
                 }
             }
-            else
+            else if(comboBoxType.SelectedIndex == 2)
             {
                 if (listViewLand.SelectedItems.Count == 1)
                 {
@@ -357,6 +360,7 @@ namespace Esoft_Project
                     realEstateSet.Address_Street = textBoxAddress_Street.Text;
                     if (textBoxLongtitude.Text != "") { realEstateSet.Coordinate_longitude = Convert.ToDouble(textBoxLongtitude.Text); }
                     if (textBoxLatitude.Text != "") { realEstateSet.Coordinate_latitude = Convert.ToDouble(textBoxLatitude.Text); }
+                    if (textBoxTotalArea.Text != "") { realEstateSet.TotalArea = Convert.ToDouble(textBoxTotalArea.Text); }
                     realEstateSet.Type = comboBoxType.SelectedIndex;
                     Program.wftDb.SaveChanges();
                     ShowRealEstatesSet();
@@ -378,7 +382,8 @@ namespace Esoft_Project
                     textBoxLatitude.Text = realEstate.Coordinate_latitude.ToString();
                     textBoxLongtitude.Text = realEstate.Coordinate_longitude.ToString();
                     textBoxRooms.Text = realEstate.Rooms.ToString();
-                }
+                textBoxTotalArea.Text = realEstate.TotalArea.ToString();
+            }
         }
 
         private void listViewHouse_SelectedIndexChanged(object sender, EventArgs e)
@@ -388,6 +393,7 @@ namespace Esoft_Project
                 RealEstateSet realEstate = listViewHouse.SelectedItems[0].Tag as RealEstateSet;
                 textBoxAddress_House.Text = realEstate.Address_House;
                 textBoxAdress_City.Text = realEstate.Address_City;
+                textBoxTotalArea.Text = realEstate.TotalArea.ToString();
                 textBoxAddress_Street.Text = realEstate.Address_Street;
                 textBoxFloors_Number.Text = realEstate.TotalFloors.ToString();
                 textBoxLatitude.Text = realEstate.Coordinate_latitude.ToString();
@@ -402,6 +408,7 @@ namespace Esoft_Project
             if (listViewLand.SelectedItems.Count == 1)
             {
                 RealEstateSet realEstate = listViewLand.SelectedItems[0].Tag as RealEstateSet;
+                textBoxTotalArea.Text = realEstate.TotalArea.ToString();
                 textBoxAdress_City.Text = realEstate.Address_City;
                 textBoxAddress_Street.Text = realEstate.Address_Street;
                 textBoxLatitude.Text = realEstate.Coordinate_latitude.ToString();

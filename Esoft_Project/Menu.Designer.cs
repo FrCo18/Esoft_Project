@@ -57,7 +57,7 @@
             this.buttonOpenClients.Margin = new System.Windows.Forms.Padding(15);
             this.buttonOpenClients.Name = "buttonOpenClients";
             this.buttonOpenClients.Padding = new System.Windows.Forms.Padding(10);
-            this.buttonOpenClients.Size = new System.Drawing.Size(265, 48);
+            this.buttonOpenClients.Size = new System.Drawing.Size(274, 48);
             this.buttonOpenClients.TabIndex = 1;
             this.buttonOpenClients.Text = "Клиенты";
             this.buttonOpenClients.UseVisualStyleBackColor = false;
@@ -71,7 +71,7 @@
             this.buttonOpenAgents.Margin = new System.Windows.Forms.Padding(15);
             this.buttonOpenAgents.Name = "buttonOpenAgents";
             this.buttonOpenAgents.Padding = new System.Windows.Forms.Padding(10);
-            this.buttonOpenAgents.Size = new System.Drawing.Size(265, 48);
+            this.buttonOpenAgents.Size = new System.Drawing.Size(274, 48);
             this.buttonOpenAgents.TabIndex = 2;
             this.buttonOpenAgents.Text = "Риелторы";
             this.buttonOpenAgents.UseVisualStyleBackColor = false;
@@ -85,7 +85,7 @@
             this.buttonOpenRealEstates.Margin = new System.Windows.Forms.Padding(15);
             this.buttonOpenRealEstates.Name = "buttonOpenRealEstates";
             this.buttonOpenRealEstates.Padding = new System.Windows.Forms.Padding(10);
-            this.buttonOpenRealEstates.Size = new System.Drawing.Size(265, 48);
+            this.buttonOpenRealEstates.Size = new System.Drawing.Size(274, 48);
             this.buttonOpenRealEstates.TabIndex = 3;
             this.buttonOpenRealEstates.Text = "Объекты недвижимости";
             this.buttonOpenRealEstates.UseVisualStyleBackColor = false;
@@ -99,7 +99,7 @@
             this.buttonOpenSupplis.Margin = new System.Windows.Forms.Padding(15);
             this.buttonOpenSupplis.Name = "buttonOpenSupplis";
             this.buttonOpenSupplis.Padding = new System.Windows.Forms.Padding(10);
-            this.buttonOpenSupplis.Size = new System.Drawing.Size(265, 48);
+            this.buttonOpenSupplis.Size = new System.Drawing.Size(274, 48);
             this.buttonOpenSupplis.TabIndex = 4;
             this.buttonOpenSupplis.Text = "Предложения";
             this.buttonOpenSupplis.UseVisualStyleBackColor = false;
@@ -113,7 +113,7 @@
             this.buttonOpenDemands.Margin = new System.Windows.Forms.Padding(15);
             this.buttonOpenDemands.Name = "buttonOpenDemands";
             this.buttonOpenDemands.Padding = new System.Windows.Forms.Padding(10);
-            this.buttonOpenDemands.Size = new System.Drawing.Size(265, 48);
+            this.buttonOpenDemands.Size = new System.Drawing.Size(274, 48);
             this.buttonOpenDemands.TabIndex = 5;
             this.buttonOpenDemands.Text = "Потребности";
             this.buttonOpenDemands.UseVisualStyleBackColor = false;
@@ -127,10 +127,11 @@
             this.buttonOpenDeals.Margin = new System.Windows.Forms.Padding(15);
             this.buttonOpenDeals.Name = "buttonOpenDeals";
             this.buttonOpenDeals.Padding = new System.Windows.Forms.Padding(10);
-            this.buttonOpenDeals.Size = new System.Drawing.Size(265, 48);
+            this.buttonOpenDeals.Size = new System.Drawing.Size(274, 48);
             this.buttonOpenDeals.TabIndex = 6;
             this.buttonOpenDeals.Text = "Сделки";
             this.buttonOpenDeals.UseVisualStyleBackColor = false;
+            this.buttonOpenDeals.Click += new System.EventHandler(this.buttonOpenDeals_Click);
             // 
             // Menu
             // 
