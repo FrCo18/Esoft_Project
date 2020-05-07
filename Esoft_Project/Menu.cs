@@ -15,6 +15,15 @@ namespace Esoft_Project
         public Menu()
         {
             InitializeComponent();
+
+            //if (FormAuthorization.users.type == "agent")
+            //{
+            //    buttonOpenAgents.Visible = false;
+            //    buttonOpenRealEstates.Location = new Point(2, buttonOpenRealEstates.Location.Y);
+            //    buttonOpenSupplys.Location = new Point(2, buttonOpenSupplys.Location.Y);
+            //    buttonOpenDemands.Location = new Point(2, buttonOpenDemands.Location.Y);
+            //    buttonOpenDeals.Location = new Point(2, buttonOpenDeals.Location.Y);
+            //}
         }
 
         private void buttonOpenClients_Click(object sender, EventArgs e)
@@ -51,6 +60,35 @@ namespace Esoft_Project
         {
             FormDeal formDeal = new FormDeal();
             formDeal.Show();
+        }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+            if (FormAuthorization.users.type == "admin")
+            {
+                buttonOpenAgents.Visible = true;
+                buttonOpenRealEstates.Location = new Point(2, buttonOpenRealEstates.Location.Y + 52);
+                buttonOpenSupplys.Location = new Point(2, buttonOpenSupplys.Location.Y + 52);
+                buttonOpenDemands.Location = new Point(2, buttonOpenDemands.Location.Y + 52);
+                buttonOpenDeals.Location = new Point(2, buttonOpenDeals.Location.Y + 52);
+            }
+            if (FormAuthorization.users.type == "agent")
+            {
+                buttonOpenAgents.Visible = false;
+                buttonOpenRealEstates.Location = new Point(2, buttonOpenRealEstates.Location.Y);
+                buttonOpenSupplys.Location = new Point(2, buttonOpenSupplys.Location.Y);
+                buttonOpenDemands.Location = new Point(2, buttonOpenDemands.Location.Y);
+                buttonOpenDeals.Location = new Point(2, buttonOpenDeals.Location.Y);
+            }
+
+            //else if (FormAuthorization.users.type == "admin")
+            //{
+            //    buttonOpenAgents.Visible = true;
+            //    buttonOpenRealEstates.Location = new Point(2, buttonOpenRealEstates.Location.Y + 52);
+            //    buttonOpenSupplys.Location = new Point(2, buttonOpenSupplys.Location.Y + 52);
+            //    buttonOpenDemands.Location = new Point(2, buttonOpenDemands.Location.Y + 52);
+            //    buttonOpenDeals.Location = new Point(2, buttonOpenDeals.Location.Y+ 52);
+            //}
         }
     }
 }

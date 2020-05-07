@@ -33,7 +33,7 @@
             this.buttonOpenClients = new System.Windows.Forms.Button();
             this.buttonOpenAgents = new System.Windows.Forms.Button();
             this.buttonOpenRealEstates = new System.Windows.Forms.Button();
-            this.buttonOpenSupplis = new System.Windows.Forms.Button();
+            this.buttonOpenSupplys = new System.Windows.Forms.Button();
             this.buttonOpenDemands = new System.Windows.Forms.Button();
             this.buttonOpenDeals = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -75,13 +75,14 @@
             this.buttonOpenAgents.TabIndex = 2;
             this.buttonOpenAgents.Text = "Риелторы";
             this.buttonOpenAgents.UseVisualStyleBackColor = false;
+            this.buttonOpenAgents.Visible = false;
             this.buttonOpenAgents.Click += new System.EventHandler(this.buttonOpenAgents_Click);
             // 
             // buttonOpenRealEstates
             // 
             this.buttonOpenRealEstates.BackColor = System.Drawing.Color.White;
             this.buttonOpenRealEstates.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonOpenRealEstates.Location = new System.Drawing.Point(2, 288);
+            this.buttonOpenRealEstates.Location = new System.Drawing.Point(2, 236);
             this.buttonOpenRealEstates.Margin = new System.Windows.Forms.Padding(15);
             this.buttonOpenRealEstates.Name = "buttonOpenRealEstates";
             this.buttonOpenRealEstates.Padding = new System.Windows.Forms.Padding(10);
@@ -91,25 +92,25 @@
             this.buttonOpenRealEstates.UseVisualStyleBackColor = false;
             this.buttonOpenRealEstates.Click += new System.EventHandler(this.buttonOpenRealEstates_Click);
             // 
-            // buttonOpenSupplis
+            // buttonOpenSupplys
             // 
-            this.buttonOpenSupplis.BackColor = System.Drawing.Color.White;
-            this.buttonOpenSupplis.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonOpenSupplis.Location = new System.Drawing.Point(2, 343);
-            this.buttonOpenSupplis.Margin = new System.Windows.Forms.Padding(15);
-            this.buttonOpenSupplis.Name = "buttonOpenSupplis";
-            this.buttonOpenSupplis.Padding = new System.Windows.Forms.Padding(10);
-            this.buttonOpenSupplis.Size = new System.Drawing.Size(274, 48);
-            this.buttonOpenSupplis.TabIndex = 4;
-            this.buttonOpenSupplis.Text = "Предложения";
-            this.buttonOpenSupplis.UseVisualStyleBackColor = false;
-            this.buttonOpenSupplis.Click += new System.EventHandler(this.buttonOpenDemands_Click);
+            this.buttonOpenSupplys.BackColor = System.Drawing.Color.White;
+            this.buttonOpenSupplys.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonOpenSupplys.Location = new System.Drawing.Point(2, 287);
+            this.buttonOpenSupplys.Margin = new System.Windows.Forms.Padding(15);
+            this.buttonOpenSupplys.Name = "buttonOpenSupplys";
+            this.buttonOpenSupplys.Padding = new System.Windows.Forms.Padding(10);
+            this.buttonOpenSupplys.Size = new System.Drawing.Size(274, 48);
+            this.buttonOpenSupplys.TabIndex = 4;
+            this.buttonOpenSupplys.Text = "Предложения";
+            this.buttonOpenSupplys.UseVisualStyleBackColor = false;
+            this.buttonOpenSupplys.Click += new System.EventHandler(this.buttonOpenDemands_Click);
             // 
             // buttonOpenDemands
             // 
             this.buttonOpenDemands.BackColor = System.Drawing.Color.White;
             this.buttonOpenDemands.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonOpenDemands.Location = new System.Drawing.Point(2, 397);
+            this.buttonOpenDemands.Location = new System.Drawing.Point(2, 339);
             this.buttonOpenDemands.Margin = new System.Windows.Forms.Padding(15);
             this.buttonOpenDemands.Name = "buttonOpenDemands";
             this.buttonOpenDemands.Padding = new System.Windows.Forms.Padding(10);
@@ -123,7 +124,7 @@
             // 
             this.buttonOpenDeals.BackColor = System.Drawing.Color.White;
             this.buttonOpenDeals.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonOpenDeals.Location = new System.Drawing.Point(2, 451);
+            this.buttonOpenDeals.Location = new System.Drawing.Point(2, 388);
             this.buttonOpenDeals.Margin = new System.Windows.Forms.Padding(15);
             this.buttonOpenDeals.Name = "buttonOpenDeals";
             this.buttonOpenDeals.Padding = new System.Windows.Forms.Padding(10);
@@ -140,7 +141,7 @@
             this.ClientSize = new System.Drawing.Size(279, 561);
             this.Controls.Add(this.buttonOpenDeals);
             this.Controls.Add(this.buttonOpenDemands);
-            this.Controls.Add(this.buttonOpenSupplis);
+            this.Controls.Add(this.buttonOpenSupplys);
             this.Controls.Add(this.buttonOpenRealEstates);
             this.Controls.Add(this.buttonOpenAgents);
             this.Controls.Add(this.buttonOpenClients);
@@ -148,6 +149,7 @@
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Esoft";
+            this.Load += new System.EventHandler(this.Menu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -159,7 +161,7 @@
         private System.Windows.Forms.Button buttonOpenClients;
         private System.Windows.Forms.Button buttonOpenAgents;
         private System.Windows.Forms.Button buttonOpenRealEstates;
-        private System.Windows.Forms.Button buttonOpenSupplis;
+        private System.Windows.Forms.Button buttonOpenSupplys;
         private System.Windows.Forms.Button buttonOpenDemands;
         private System.Windows.Forms.Button buttonOpenDeals;
     }

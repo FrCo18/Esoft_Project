@@ -325,11 +325,13 @@ namespace Esoft_Project
             if (listViewDealSet.SelectedItems.Count == 1)
             {
                 DealSet deal = listViewDealSet.SelectedItems[0].Tag as DealSet;
-                comboBoxSupply.SelectedItem = deal.SupplySet.Id + ":  Риелтор: " + deal.SupplySet.AgentsSet.LastName + " " + deal.SupplySet.AgentsSet.FirstName[0] + ". " + deal.SupplySet.AgentsSet.MiddleName[0] + ". " + " Клиент: " +
-                     deal.SupplySet.ClientsSet.LastName + " " + deal.SupplySet.ClientsSet.FirstName[0] + ". " + deal.SupplySet.ClientsSet.MiddleName[0] + ".";
-                
-                comboBoxDemand.SelectedItem = deal.DemandSet.Id + ":  Риелтор: " + deal.DemandSet.AgentsSet.LastName + " " + deal.DemandSet.AgentsSet.FirstName[0] + ". " + deal.DemandSet.AgentsSet.MiddleName[0] + ". " +" Клиент: "+
-                     deal.DemandSet.ClientsSet.LastName + " " + deal.DemandSet.ClientsSet.FirstName[0] + ". " + deal.DemandSet.ClientsSet.MiddleName[0] + ".";
+                //comboBoxSupply.SelectedItem = deal.SupplySet.Id + ":  Риелтор: " + deal.SupplySet.AgentsSet.LastName + " " + deal.SupplySet.AgentsSet.FirstName[0] + ". " + deal.SupplySet.AgentsSet.MiddleName[0] + ". " + " Клиент: " +
+                //     deal.SupplySet.ClientsSet.LastName + " " + deal.SupplySet.ClientsSet.FirstName[0] + ". " + deal.SupplySet.ClientsSet.MiddleName[0] + ".";
+
+                //comboBoxDemand.SelectedItem = deal.DemandSet.Id + ":  Риелтор: " + deal.DemandSet.AgentsSet.LastName + " " + deal.DemandSet.AgentsSet.FirstName[0] + ". " + deal.DemandSet.AgentsSet.MiddleName[0] + ". " +" Клиент: "+
+                //     deal.DemandSet.ClientsSet.LastName + " " + deal.DemandSet.ClientsSet.FirstName[0] + ". " + deal.DemandSet.ClientsSet.MiddleName[0] + ".";
+                comboBoxSupply.SelectedIndex = comboBoxSupply.FindString(deal.IdSupply.ToString());
+                comboBoxDemand.SelectedIndex = comboBoxDemand.FindString(deal.IdDemand.ToString());
             }
             Deductions();
         }
