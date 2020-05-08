@@ -498,7 +498,7 @@
             // 
             this.buttonAdd.BackColor = System.Drawing.Color.White;
             this.buttonAdd.Font = new System.Drawing.Font("Roboto Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonAdd.Location = new System.Drawing.Point(189, 434);
+            this.buttonAdd.Location = new System.Drawing.Point(188, 434);
             this.buttonAdd.Margin = new System.Windows.Forms.Padding(15);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Padding = new System.Windows.Forms.Padding(10);
