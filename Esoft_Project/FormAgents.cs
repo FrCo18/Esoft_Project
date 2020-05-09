@@ -75,6 +75,7 @@ namespace Esoft_Project
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {
+            if(listViewAgents.SelectedItems.Count==1)
             if (textBoxNameAgent.Text != "" && textBoxLastNameAgent.Text != "" && textBoxMiddleNameAgent.Text != "")
             {
                 AgentsSet agentSet = listViewAgents.SelectedItems[0].Tag as AgentsSet;
